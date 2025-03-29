@@ -34,3 +34,4 @@ Exemplo:
   
 - **Premissas** (o que se assume como verdadeiro para seguir com o projeto):
   - 📌 O design será responsivo para rodar bem no mobile.
+
