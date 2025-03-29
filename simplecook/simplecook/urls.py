@@ -15,10 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+
 from django.urls import path
+
 # Import the index view from the receitas app
-from receitas.views import indexView as index
+
+from receitas.views import indexView , ingredientesView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),  # Add this line to include the index view
+    path('', indexView, name='index'),  # Add this line to include the index view
+    path('ingredientes/', ingredientesView, name='ingredientes'),  # Add this line to include the ingredientes view
 ]
+
+
