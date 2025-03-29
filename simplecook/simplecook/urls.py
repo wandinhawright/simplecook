@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+# Import the index view from the receitas app
+from receitas.views import indexView as index
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='index'),  # Add this line to include the index view
 ]
