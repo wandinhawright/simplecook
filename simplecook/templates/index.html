@@ -1,4 +1,34 @@
-<h1>Bem vindo ao Simple cook</h1>
-<p>O Simple cook é um sistema de gerenciamento de receitas.</p>
-<p>Aqui você recebe sujestões de receitas com base nos seus ingredientes</p>
-<a href="{% url 'ingredientes' %}" class="btn btn-primary">Ir para Ingredientes</a>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gradient-to-b from-pink-300 to-red-500 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 bg-white shadow-md">
+      <h1 class="text-2xl font-bold text-black">SimpleCook</h1>
+      <div class="flex items-center space-x-2">
+        <span class="text-black font-medium">kaiky dourado</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7" />
+        </svg>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-center text-center px-4">
+      <h2 class="text-4xl font-extrabold text-black mb-4">receita blabla</h2>
+      <p class="text-lg text-black max-w-2xl mb-8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget leo tincidunt, commodo eros in, varius erat. Duis non neque tincidunt, iaculis risus vel, consequat felis. Sed vel orci ac neque molestie convallis sed vitae dui.
+      </p>
+      <a href="#ingredientes" class="inline-flex items-center px-6 py-3 bg-white text-black font-medium text-lg rounded-full shadow-md hover:bg-gray-200 transition">
+        Ir para Ingredientes
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </main>
+  </body>
+</html>
