@@ -1,0 +1,6 @@
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+exclude = ["__init__.py"]
+fix = true
+select = ["E", "F", "W"]
