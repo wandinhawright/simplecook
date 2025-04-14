@@ -1,0 +1,13 @@
+{
+    "indent": 2,
+    "profile": "django",
+    "blank_line_after_tag": "load,extends",
+    "blank_line_before_tag": "block",
+    "line_break_after_multiline_tag": true,
+    "max_line_length": 100,
+    "preserve_blank_lines": false,
+    "format_css": true,
+    "format_js": true,
+    "close_void_tags": true,
+    "ignore_blocks": "raw,verbatim"
+  }
