@@ -40,8 +40,8 @@
             background-color: #fff0ab;
             border-radius: 1.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 1000px;
-            height: 450px;
+            max-width: 2000px;
+            max-height: 2000px.;
             margin: 0 auto;
             padding: 2rem;
             position: relative;
@@ -105,24 +105,38 @@
     </header>
     <!-- Main Content -->
     <main class="flex-grow flex flex-col items-center justify-center text-center px-4 py-8">
-        <div class="recipe-card">
-        {% for i in range_20 %}
-        <h2> a </h2>
-        {% endfor %}
-            
+        <div class="recipe-card overflow-hidden">
+            <!-- form de inserção dos ingredientes -->
+            <h1 class="text-4xl font-bold mb-4">Ingredientes</h1>
+            <form method="post" class="mb-6">
+                {% csrf_token %}
+                <div class="flex items-center space-x-4">
+                    <input type="text" name="ingrediente" placeholder="Digite o ingrediente" class="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-pink-300" required>
+                    <button type="submit" class="bg-pink-300 text-white px-4 py-2 rounded-lg hover:bg-pink-400 transition duration-300">Adicionar</button>
+                </div>
+            </form>
+            <div class="grid grid-cols-5 grid-rows-4 gap-10 overflow-y-auto max-h-[400px]">
+                {% for i in "12345678901234567890" %}
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold mb-2">Ingrediente {{ i }}</h2>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="relative mt-8">
+                <a href="{% url 'ingredientes' %}"
+                   class="btn-gerar transform transition-transform duration-300 hover:scale-105 hover:bg-pink-300 hover:shadow-lg">
+                    Gerar
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="h-5 w-5 ml-2 mt-1"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
         </div>
-      <div class="relative mt-8">
-        <a href="{% url 'ingredientes' %}"
-           class="btn-gerar transform transition-transform duration-300 hover:scale-105 hover:bg-pink-300 hover:shadow-lg">
-          Gerar
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-5 w-5 ml-2 mt-1"
-               fill="none"
-               viewBox="0 0 24 24"
-               stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
+    </main>
       </div>
     </div>
   </main>
